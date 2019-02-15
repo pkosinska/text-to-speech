@@ -39,17 +39,17 @@
     
     <h1 class="mdc-typography--display1">Hello, World!</h1>
     <input type="text" name="say phrase">
-    <button type="button" class="mdc-button mdc-button--raised">
+    <button type="button" class="special mdc-button mdc-button--raised">
       Say phrase
     </button>
     <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       Wake up!
     </button> <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       I don't like haters.
     </button> <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       Put that cookie down.
     </button>
     
@@ -95,11 +95,14 @@
             
         // hook up event handler on the buttons
         
-         $("button").on("click", function() {
+         $("button.standard").on("click", function() {
            sayIt($(this).text());
          });
         
-
+         $("button.special").on("click", function() {
+           sayIt($(#phrase).val());
+         });
+        
 
 
         // need to be able to clear the cache to load new versions
